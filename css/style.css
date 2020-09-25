@@ -1,0 +1,9 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#renderArea{
+    width: 40%;
+    margin: 0 auto;
+}
