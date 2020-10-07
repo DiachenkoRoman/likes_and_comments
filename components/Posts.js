@@ -45,9 +45,7 @@ export class Post{
         }
         node.innerHTML = `
         <div id=${this.id} class="postBlock">
-
             <img src="${this.image}">
-            
             <div id="${this.id}">
                 <a href=${this.link}><h3>${this.name}</h3></a>
                 <p>${this.description}</p>
@@ -57,6 +55,8 @@ export class Post{
                 <button class="comments__submit">Submit</button>
             </div>
         </div>`;
+
+
 
         let like = node.querySelector(".postBlock__like_but");
         if( like ){
