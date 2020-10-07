@@ -1,4 +1,4 @@
-export const data = localStorage.getItem("data") ? JSON.parse(localStorage.getItem("data")) : [
+export const clearData = [
     {
         id: 1,
         link: "#1",
@@ -52,4 +52,20 @@ export const data = localStorage.getItem("data") ? JSON.parse(localStorage.getIt
         comments: []
     },
 ];
+
+
+export const getLCData = () => {
+
+    const LC_SELECTOR = "data";
+    const data = localStorage.getItem( LC_SELECTOR );
+
+    if( data ){
+        return JSON.parse( data );
+    } else {
+        return clearData;
+    }
+
+}
+
+export const data = localStorage.getItem("data") ? JSON.parse(localStorage.getItem("data")) : clearData
 !localStorage.getItem("data") ? localStorage.setItem("data", JSON.stringify(data)) : null;
